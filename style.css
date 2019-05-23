@@ -1,3 +1,9 @@
+:root {
+  --primary-color: rgb(223, 115, 4);
+  --dark-color: #333333;
+  --light-color: #f4f4f4;
+  --white-color: #fff;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -20,7 +26,7 @@ input {
 label {
   font-size: 1rem;
   font-weight: 900;
-  color: #e97304;
+  color: var(--primary-color);
 }
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
@@ -45,11 +51,7 @@ input[type='number']::-webkit-outer-spin-button {
   padding: 0 2rem;
   overflow: hidden;
 }
-.card {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
+
 #tip-form {
   width: 90%;
 }
@@ -57,8 +59,8 @@ input[type='number']::-webkit-outer-spin-button {
   text-align: center;
 }
 .bg-dark {
-  background: #333;
-  color: #fff;
+  background: var(--dark-color);
+  color: var(--light-color);
 }
 
 #loading,
@@ -69,20 +71,21 @@ input[type='number']::-webkit-outer-spin-button {
 .alert {
   display: flex;
   flex-direction: column;
-  width: 100%;
   background: red;
-  padding: 20px;
-  font-size: 2rem;
-  color: white;
+  padding: 15px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: var(--light-color);
 }
 .row {
   width: 70%;
 }
 /* Showcase */
 #showcase {
-  background: #333 url('./img/main_image.jpg') no-repeat center center/cover;
+  background: var(--dark-color) url('./img/main_image.jpg') no-repeat center
+    center/cover;
   height: 100vh;
-  color: #fff;
+  color: var(--light-color);
 }
 #showcase .showcase-content {
   display: flex;
@@ -103,18 +106,18 @@ input[type='number']::-webkit-outer-spin-button {
 .btn {
   display: inline-block;
   width: 90%;
-  color: #fff;
-  background: #93cb52;
+  color: var(--light-color);
+  cursor: pointer;
   padding: 0.5rem 2rem;
   border: none;
   border-radius: 5px;
 }
 .btn:hover {
-  background: #e97304;
+  background: var(--primary-color);
 }
 .btn-dark {
-  background: #333;
-  color: #fff;
+  background: var(--dark-color);
+  color: var(--light-color);
 }
 .form-group {
   margin-bottom: 1rem;
@@ -123,9 +126,9 @@ input[type='number']::-webkit-outer-spin-button {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 1.5rem;
-  color: #fff;
+  color: var(--light-color);
   padding: 5px;
-  background: rgb(223, 115, 4);
+  background: var(--primary-color);
   border-radius: 10%;
 }
 
@@ -133,12 +136,13 @@ input[type='number']::-webkit-outer-spin-button {
   width: 80%;
   height: 40px;
   padding: 5px;
-  background: #333333;
-  color: #f4f4f4;
+  cursor: pointer;
+  background: var(--dark-color);
+  color: var(--light-color);
 }
 .form-control:focus {
   background: rgba(223, 115, 4, 0.4);
-  color: #fff;
+  color: var(--light-color);
 }
 .container-results {
   display: flex;
@@ -150,8 +154,8 @@ input[type='number']::-webkit-outer-spin-button {
   width: 100%;
   height: 40px;
   padding: 5px;
-  background: #333333;
-  color: #f4f4f4;
+  background: var(--dark-color);
+  color: var(--light-color);
 }
 .results-input-group {
   display: flex;
