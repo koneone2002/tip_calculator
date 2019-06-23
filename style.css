@@ -121,6 +121,7 @@ input[type='number']::-webkit-outer-spin-button {
 .btn {
   display: inline-block;
   width: 50%;
+
   color: var(--light-color);
   cursor: pointer;
   padding: 0.5rem 2rem;
@@ -129,6 +130,9 @@ input[type='number']::-webkit-outer-spin-button {
 }
 .btn:hover {
   background: var(--primary-color);
+}
+button.form-group {
+  font-size: 1.5rem;
 }
 .btn-dark {
   background: var(--dark-color);
@@ -216,6 +220,9 @@ input[type='number']::-webkit-outer-spin-button {
   }
   .btn {
     width: 100%;
+  }
+  button.form-group {
+    font-size: 1rem;
   }
   #per-person label.results-input-group-text {
     font-size: 0.9rem;
