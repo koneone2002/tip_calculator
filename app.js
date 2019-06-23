@@ -2,9 +2,9 @@
 
 document.getElementById('tip-form').addEventListener('submit', function(event) {
   // Hide results
-  document.getElementById('results').style.display = 'none';
-  // Show loader
-  document.getElementById('loading').style.display = 'block';
+  // document.getElementById('results').style.display = 'none';
+  // // Show loader
+  // document.querySelector('.loader').style.display = 'block';
   setTimeout(calculateResults, 2000);
 
   event.preventDefault();
@@ -19,11 +19,15 @@ function calculateResults() {
   const uiTotalTip = document.getElementById('total-tip');
   const uiTotalPerPerson = document.getElementById('amount-per-person');
 
+  const loader = document.querySelector('.container-loader');
+  const results = document.getElementById('results');
+
   // Calculations
   const total = parseFloat(uiAmount.value);
   const tip = parseFloat((uiTip.value / 100) * total);
   const people = uiParty.value;
   const billTotal = total + tip;
+
   const amountPerPerson = parseFloat(billTotal / uiParty.value);
 
   // Check for positive values
@@ -33,13 +37,24 @@ function calculateResults() {
     // Compute tip  amounts
   } else if (isFinite(billTotal)) {
     uiTotalBill.value = billTotal.toFixed(2);
+
     uiTotalTip.value = tip.toFixed(2);
     uiTotalPerPerson.value = amountPerPerson.toFixed(2);
+    loader.style.display = 'block';
+    setTimeout(() => {
+      loader.style.opacity = 0;
+      loader.style.display = 'none';
+
+      results.style.display = 'block';
+      setTimeout(() => {
+        results.style.opacity = 1;
+      }, 50);
+    }, 4000);
 
     // Hide loader
-    document.getElementById('loading').style.display = 'none';
-    // Show results
-    document.getElementById('results').style.display = 'block';
+    // document.querySelector('.loader').style.display = 'none';
+    // // Show results
+    // document.getElementById('results').style.display = 'block';
   } else {
     showError('Please check your numbers');
   }
@@ -48,13 +63,13 @@ function calculateResults() {
 // Show Error
 function showError(error) {
   // Hide loader
-  document.getElementById('loading').style.display = 'none';
+  document.querySelector('.container-loader').style.display = 'none';
   // Show results
   document.getElementById('results').style.display = 'none';
   //Create div
   const errorDiv = document.createElement('div');
   // Get elements
-  const card = document.querySelector('.card');
+  const card = document.querySelector('.card-body');
   const heading = document.querySelector('.heading');
   // Add class
   errorDiv.className = 'alert alert-danger';

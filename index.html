@@ -7,6 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
+    <link rel="stylesheet" href="loader1.css" />
     <link rel="stylesheet" href="style.css" />
 
     <title>Tip Calculator</title>
@@ -14,8 +15,8 @@
   <body class="bg-dark" id="showcase">
     <div class="container showcase-content">
       <div class="row">
-        <div class="container">
-          <div class=" card card-body text-center mt-5">
+        <div class="container card">
+          <div class="card-body text-center mt-5">
             <h1 class="heading display-5 pb-3">Tip Calculator</h1>
             <div class="form-container">
               <form id="tip-form">
@@ -63,8 +64,8 @@
             </div>
 
             <!-- Loader goes here -->
-            <div id="loading">
-              <img src="img/spinner.gif" alt="" />
+            <div class="container-loader">
+              <div class="loader"></div>
             </div>
             <!-- Results -->
             <div class="container-results card-body text-center mt-5">
@@ -74,7 +75,7 @@
                   <div class="form-group">
                     <div class="results-input-group">
                       <label class="results-input-group-text"
-                        >Total Bill $
+                        >Total Bill
                       </label>
                       <input
                         type="number"
@@ -86,9 +87,7 @@
                   </div>
                   <div class="form-group">
                     <div class="results-input-group">
-                      <label class="results-input-group-text"
-                        >Total Tip $</label
-                      >
+                      <label class="results-input-group-text">Total Tip</label>
                       <input
                         type="number"
                         class="input-form-control text-center"
@@ -100,7 +99,7 @@
                   <div class="form-group">
                     <div class="results-input-group text-center">
                       <label class="results-input-group-text"
-                        >Amount Per Person $
+                        >Amount Per Person
                       </label>
                       <input
                         type="number"

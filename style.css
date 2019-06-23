@@ -1,5 +1,5 @@
 :root {
-  --primary-color: rgb(223, 115, 4);
+  --primary-color: rgb(245, 122, 7);
   --dark-color: #333333;
   --light-color: #f4f4f4;
   --white-color: #fff;
@@ -23,11 +23,7 @@ h2 {
 input {
   font-size: 1.5rem;
 }
-label {
-  font-size: 1rem;
-  font-weight: 900;
-  color: var(--primary-color);
-}
+
 input[type='number']::-webkit-inner-spin-button,
 input[type='number']::-webkit-outer-spin-button {
   -webkit-appearance: none;
@@ -62,10 +58,25 @@ input[type='number']::-webkit-outer-spin-button {
   background: var(--dark-color);
   color: var(--light-color);
 }
+#spinner {
+  margin: 0 auto;
+  width: 40%;
+}
 
-#loading,
-#results {
+#results,
+.container-loader {
   display: none;
+}
+#results {
+  transition: opacity 2s ease-in;
+}
+.container-loader {
+  width: 50%;
+  margin: 0 auto;
+  height: 240px;
+}
+.loader {
+  margin: 0 auto;
 }
 
 .alert {
@@ -87,11 +98,12 @@ input[type='number']::-webkit-outer-spin-button {
   height: 100vh;
   color: var(--light-color);
 }
+
 #showcase .showcase-content {
   display: flex;
   flex-direction: column;
   text-align: center;
-
+  width: 80%;
   align-items: center;
   height: 100%;
   padding: 0 2rem;
@@ -103,9 +115,12 @@ input[type='number']::-webkit-outer-spin-button {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.4);
 }
+#tip-form {
+  margin: 0 auto;
+}
 .btn {
   display: inline-block;
-  width: 90%;
+  width: 50%;
   color: var(--light-color);
   cursor: pointer;
   padding: 0.5rem 2rem;
@@ -131,6 +146,12 @@ input[type='number']::-webkit-outer-spin-button {
   background: var(--primary-color);
   border-radius: 10%;
 }
+.results-input-group-text {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: var(--primary-color);
+  z-index: 2;
+}
 
 .form-control {
   width: 80%;
@@ -148,7 +169,7 @@ input[type='number']::-webkit-outer-spin-button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
+  text-align: center;
 }
 .input-form-control {
   width: 100%;
