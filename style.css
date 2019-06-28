@@ -209,6 +209,9 @@ button {
     background-color: var(--dark-color);
     opacity: 0.9;
   }
+  input#amount-per-person.input-form-control {
+    margin-bottom: 20px;
+  }
   
   .input-group-text,
   .results-input-group-text {
