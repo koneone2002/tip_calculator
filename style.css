@@ -244,7 +244,7 @@ button {
     align-items: center;
     height: 100vh;
     padding: 0 2rem;
-    /* overflow: auto; */
+    overflow: inherit;
   /* Overlay */
   
     
