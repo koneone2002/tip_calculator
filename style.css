@@ -200,8 +200,13 @@ button {
     overflow: auto;
     
   }
-  #total-bill, #total-tip, #amount-per-person {
-    background: var(--dark-color);
+ 
+  
+
+  input#total-bill.input-form-control, 
+  input#total-tip.input-form-control, 
+  input#amount-per-person.input-form-control {
+    background-color: pink;
   }
   
   .input-group-text,
@@ -221,7 +226,7 @@ button {
 
   }
   
-  .input-group{
+  .input-group, .results-input-group {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -251,7 +256,7 @@ button {
   input.input-form-control {
     font-size: 1.25rem;
     width: 100%;
-    z-index: 2;
+    
   }
   h1 {
     font-size: 1.75rem;
