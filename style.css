@@ -225,7 +225,7 @@ button {
     width: 100%;
     overflow: auto;
     
-    background: var(--dark-color) url('./img/main_image.jpg') no-repeat center
+    background: var(--dark-color) url('./img/main_image_sn.jpeg') no-repeat center
         center/cover;
 
   }
