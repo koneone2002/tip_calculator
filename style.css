@@ -67,9 +67,9 @@ input[type='number']::-webkit-outer-spin-button {
 .container-loader {
   display: none;
 }
-#results {
+/* #results {
   transition: opacity 2s ease-in;
-}
+} */
 .container-loader {
   width: 50%;
   margin: 0 auto;
