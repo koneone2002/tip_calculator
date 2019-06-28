@@ -207,6 +207,7 @@ button {
   input#total-tip.input-form-control, 
   input#amount-per-person.input-form-control {
     background-color: pink;
+    opacity: none;
   }
   
   .input-group-text,
