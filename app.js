@@ -5,7 +5,7 @@ document.getElementById('tip-form').addEventListener('submit', function(event) {
   // document.getElementById('results').style.display = 'none';
   // // Show loader
   // document.querySelector('.loader').style.display = 'block';
-  setTimeout(calculateResults, 2000);
+  setTimeout(calculateResults, 1000);
 
   event.preventDefault();
 });
@@ -51,10 +51,11 @@ function calculateResults() {
       }, 50);
     }, 4000);
 
-    // Hide loader
-    // document.querySelector('.loader').style.display = 'none';
-    // // Show results
-    // document.getElementById('results').style.display = 'block';
+    // clear input values
+    uiAmount.value = '';
+    uiTip.value = '';
+    uiParty.value = '';
+
   } else {
     showError('Please check your numbers');
   }

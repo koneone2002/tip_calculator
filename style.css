@@ -150,11 +150,19 @@ button {
   background: var(--primary-color);
   border-radius: 10%;
 }
+.input-group{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .results-input-group-text {
   font-size: 1.2rem;
   font-weight: 900;
-  color: var(--primary-color);
-  z-index: 2;
+  color: #fff;
+  background-color: var(--primary-color);
+  margin-bottom: 5px;
+  display: block;
+  width: 100%;
 }
 
 .form-control {
@@ -192,13 +200,26 @@ button {
   .container {
     width: 100%;
     padding: 0;
+    
   }
   .showcase-content {
     overflow: scroll;
   }
   .input-group-text,
   .results-input-group-text {
+    
     font-size: 1.5rem;
+    color: #fff;
+    background-color: var(--primary-color);
+    display: block;
+    width: 100%;
+  }
+  span.input-group-text{
+    
+    font-size: 1.25rem;
+    border-radius: 0;
+    width: 20%;
+
   }
   #showcase .showcase-content {
     width: 100%;
