@@ -224,6 +224,9 @@ button {
   #showcase .showcase-content {
     width: 100%;
     overflow: auto;
+    
+    background: var(--dark-color) url('./img/main_image.jpg') no-repeat center
+        center/cover;
 
   }
   input::placeholder {
@@ -239,6 +242,7 @@ button {
   }
   h2 {
     font-size: 1.75rem;
+    color: var(--primary-color);
   }
   label.results-input-group-text {
     font-size: 1rem;
