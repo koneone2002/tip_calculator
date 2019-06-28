@@ -170,7 +170,7 @@ button {
   color: var(--light-color);
 }
 .form-control:focus {
-  /* background: rgba(223, 115, 4, 0.4); */
+  background: rgba(223, 115, 4, 0.4);
   color: var(--light-color);
 }
 .container-results {
@@ -200,7 +200,9 @@ button {
     overflow: auto;
     
   }
- 
+  .container-results {
+    margin-top: 90px;
+  }
   
 
   input#total-bill.input-form-control, 
