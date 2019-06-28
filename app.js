@@ -52,9 +52,9 @@ function calculateResults() {
     }, 4000);
 
     // clear input values
-    uiAmount.value = '';
-    uiTip.value = '';
-    uiParty.value = '';
+    // uiAmount.value = '';
+    // uiTip.value = '';
+    // uiParty.value = '';
 
   } else {
     showError('Please check your numbers');
