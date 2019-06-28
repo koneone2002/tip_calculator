@@ -150,11 +150,7 @@ button {
   background: var(--primary-color);
   border-radius: 10%;
 }
-.input-group{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 .results-input-group-text {
   font-size: 1.2rem;
   font-weight: 900;
@@ -220,6 +216,11 @@ button {
     border-radius: 0;
     width: 20%;
 
+  }
+  .input-group{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   #showcase .showcase-content {
     width: 100%;
