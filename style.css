@@ -227,16 +227,19 @@ button {
     background: var(--dark-color) url('./img/main_image_sn.jpeg') no-repeat center
         center/cover;
   }
-  .showcase-content {
-    /* width: 100%;
-    overflow: auto; */
-    display: none;
-    
-   
-
-  }
+ 
   #showcase .showcase-content {
-    background-color: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    align-items: center;
+    height: 100vh;
+    padding: 0 2rem;
+    overflow: auto;
+  /* Overlay */
+  
+    
   }
   input::placeholder {
     font-size: 1rem;
