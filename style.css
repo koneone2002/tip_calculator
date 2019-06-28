@@ -206,8 +206,8 @@ button {
   input#total-bill.input-form-control, 
   input#total-tip.input-form-control, 
   input#amount-per-person.input-form-control {
-    background-color: pink;
-    opacity: none;
+    background-color: var(--dark-color);
+    opacity: 0.9;
   }
   
   .input-group-text,
