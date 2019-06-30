@@ -1,16 +1,15 @@
 // Listen for submit
 
 document.getElementById('tip-form').addEventListener('submit', function(event) {
-  // Hide results
-  // document.getElementById('results').style.display = 'none';
-  // // Show loader
-  // document.querySelector('.loader').style.display = 'block';
+  
   setTimeout(calculateResults, 1000);
 
   event.preventDefault();
 });
+// Listen for reset Button click
 document.getElementById('reset').addEventListener('click', resetAll);
 
+// UI Global vars
 const uiAmount = document.getElementById('amount');
 const uiTip = document.getElementById('tip');
 const uiParty = document.getElementById('party');
@@ -52,11 +51,6 @@ function calculateResults() {
         results.style.opacity = 1;
       }, 50);
     }, 4000);
-
-    // clear input values
-    // uiAmount.value = '';
-    // uiTip.value = '';
-    // uiParty.value = '';
 
   } else {
     showError('Please check your numbers');
