@@ -9,13 +9,14 @@ document.getElementById('tip-form').addEventListener('submit', function(event) {
 
   event.preventDefault();
 });
+document.getElementById('reset').addEventListener('click', resetAll);
 
+const uiAmount = document.getElementById('amount');
+const uiTip = document.getElementById('tip');
+const uiParty = document.getElementById('party');
 
 function calculateResults() {
   // UI vars
-  const uiAmount = document.getElementById('amount');
-  const uiTip = document.getElementById('tip');
-  const uiParty = document.getElementById('party');
   const uiTotalBill = document.getElementById('total-bill');
   const uiTotalTip = document.getElementById('total-tip');
   const uiTotalPerPerson = document.getElementById('amount-per-person');
@@ -85,7 +86,14 @@ function showError(error) {
   // Clear error after 3 seconds
   setTimeout(clearError, 3000);
 }
+function resetAll(){
 
+  results.style.display = 'none';
+  uiAmount.value = '';
+  uiTip.value = '';
+  uiParty.value = '';
+
+}
 function clearError() {
   document.querySelector('.alert').remove();
 }
