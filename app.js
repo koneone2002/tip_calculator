@@ -10,6 +10,7 @@ document.getElementById('tip-form').addEventListener('submit', function(event) {
   event.preventDefault();
 });
 
+
 function calculateResults() {
   // UI vars
   const uiAmount = document.getElementById('amount');
@@ -60,6 +61,7 @@ function calculateResults() {
     showError('Please check your numbers');
   }
 }
+
 
 // Show Error
 function showError(error) {
