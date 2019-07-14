@@ -1,15 +1,12 @@
 // Listen for submit
 
 document.getElementById('tip-form').addEventListener('submit', function(event) {
-  
   setTimeout(calculateResults, 1000);
 
   event.preventDefault();
 });
 // Listen for reset Button click
 document.getElementById('reset').addEventListener('click', resetAll);
-
-
 
 function calculateResults() {
   // UI vars
@@ -32,7 +29,7 @@ function calculateResults() {
   const amountPerPerson = parseFloat(billTotal / uiParty.value);
 
   // Check for positive values
-  if (total < 1 || tip < 1 || people < 1) {
+  if (total < 1 || tip < 0 || people < 1) {
     showError('Please check your numbers');
 
     // Compute tip  amounts
@@ -51,16 +48,13 @@ function calculateResults() {
         results.style.opacity = 1;
       }, 50);
     }, 3000);
-
   } else {
     showError('Please check your numbers');
   }
 }
 
-
 // Show Error
 function showError(error) {
-
   //Create div
   const errorDiv = document.createElement('div');
   // Get elements
@@ -79,9 +73,8 @@ function showError(error) {
 }
 
 // reload window
-function resetAll(){
-  window.location.reload();
-
+function resetAll() {
+  setTimeout(location.reload(true));
 }
 function clearError() {
   document.querySelector('.alert').remove();
