@@ -7,18 +7,19 @@ document.getElementById('tip-form').addEventListener('submit', function(event) {
 });
 // Listen for reset Button click
 document.getElementById('reset').addEventListener('click', resetAll);
+// Global vars
+const uiAmount = document.getElementById('amount');
+const uiTip = document.getElementById('tip');
+const uiParty = document.getElementById('party');
+
+const loader = document.querySelector('.container-loader');
+const results = document.getElementById('results');
 
 function calculateResults() {
   // UI vars
-  const uiAmount = document.getElementById('amount');
-  const uiTip = document.getElementById('tip');
-  const uiParty = document.getElementById('party');
   const uiTotalBill = document.getElementById('total-bill');
   const uiTotalTip = document.getElementById('total-tip');
   const uiTotalPerPerson = document.getElementById('amount-per-person');
-
-  const loader = document.querySelector('.container-loader');
-  const results = document.getElementById('results');
 
   // Calculations
   const total = parseFloat(uiAmount.value);
@@ -35,9 +36,9 @@ function calculateResults() {
     // Compute tip  amounts
   } else if (isFinite(billTotal)) {
     uiTotalBill.value = billTotal.toFixed(2);
-
     uiTotalTip.value = tip.toFixed(2);
     uiTotalPerPerson.value = amountPerPerson.toFixed(2);
+
     loader.style.display = 'block';
     setTimeout(() => {
       loader.style.opacity = 0;
@@ -74,7 +75,11 @@ function showError(error) {
 
 // reload window
 function resetAll() {
-  setTimeout(location.reload(true));
+  results.style.display = 'none';
+  uiAmount.value = '';
+  uiTip.value = '';
+  uiParty.value = '';
+  loader.style = 'none';
 }
 function clearError() {
   document.querySelector('.alert').remove();
