@@ -92,8 +92,7 @@ input[type='number']::-webkit-outer-spin-button {
   color: var(--light-color);
 }
 .row {
-  width: 77%;
-  overflow: scroll;
+  width: 55%;
 
   /* overflow-y: scroll; */
 }

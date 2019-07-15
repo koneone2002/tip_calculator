@@ -12,7 +12,7 @@ const uiAmount = document.getElementById('amount');
 const uiTip = document.getElementById('tip');
 const uiParty = document.getElementById('party');
 const results = document.getElementById('results');
-
+const formInput = document.querySelector('.form-container');
 function calculateResults() {
   // UI vars
   const uiTotalBill = document.getElementById('total-bill');
@@ -34,6 +34,7 @@ function calculateResults() {
 
     // Compute tip  amounts
   } else if (isFinite(billTotal)) {
+    formInput.style.display = 'none';
     uiTotalBill.value = billTotal.toFixed(2);
     uiTotalTip.value = tip.toFixed(2);
     uiTotalPerPerson.value = amountPerPerson.toFixed(2);
@@ -75,6 +76,7 @@ function showError(error) {
 
 // reload window
 function resetAll() {
+  formInput.style.display = 'block';
   results.style.display = 'none';
   uiAmount.value = '';
   uiTip.value = '';
