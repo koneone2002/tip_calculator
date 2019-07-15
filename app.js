@@ -48,6 +48,7 @@ function calculateResults() {
       setTimeout(() => {
         results.style.opacity = 1;
       }, 50);
+      loader.style = 'none';
     }, 3000);
   } else {
     showError('Please check your numbers');
@@ -79,7 +80,7 @@ function resetAll() {
   uiAmount.value = '';
   uiTip.value = '';
   uiParty.value = '';
-  loader.style = 'none';
+  // loader.style = 'none';
 }
 function clearError() {
   document.querySelector('.alert').remove();
