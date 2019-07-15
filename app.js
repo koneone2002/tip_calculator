@@ -11,8 +11,6 @@ document.getElementById('reset').addEventListener('click', resetAll);
 const uiAmount = document.getElementById('amount');
 const uiTip = document.getElementById('tip');
 const uiParty = document.getElementById('party');
-
-const loader = document.querySelector('.container-loader');
 const results = document.getElementById('results');
 
 function calculateResults() {
@@ -20,6 +18,7 @@ function calculateResults() {
   const uiTotalBill = document.getElementById('total-bill');
   const uiTotalTip = document.getElementById('total-tip');
   const uiTotalPerPerson = document.getElementById('amount-per-person');
+  const loader = document.querySelector('.container-loader');
 
   // Calculations
   const total = parseFloat(uiAmount.value);
@@ -80,7 +79,6 @@ function resetAll() {
   uiAmount.value = '';
   uiTip.value = '';
   uiParty.value = '';
-  // loader.style = 'none';
 }
 function clearError() {
   document.querySelector('.alert').remove();
